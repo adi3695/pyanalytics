@@ -14,6 +14,7 @@ list2.count('f')
 len(list2)
 dir(list)
 dir(tuple)
+dir(set)
 dir(list) #functions which can be operated on list of DS
 sorted(list2)
 list2[2]
@@ -21,7 +22,7 @@ list2[2] = 'Z'  #list is mutable, ie. values can be changed
 list2
 #%%mutatble - changed, immutable- cannot be changed
 #tuple - multiple type of objects like list, immutable: ( round brackets) : no changes
-tuple1 = (1, 2, 'a', 'b')
+tuple1 = tuple([1, 2, 'a', 'b'])
 tuple1
 type(tuple1)
 tuple1[1]
@@ -41,6 +42,7 @@ car['brand']
 car['year']
 car.get('year')
 dir(car)
+dir?
 car['brand'] = 'MARUTI'
 car  #mutable , value can be changed
 
@@ -188,7 +190,8 @@ import pandas as pd
 pd?
 dir(pd)
 
-df1 = pd.DataFrame({'rollno':[1,2,3,4], 'name': [ "Dhiraj", "Kounal", "Akhil", "Pooja" ], 'marks':[ 40, 50, 60.5, 70 ], 'gender':['M', 'M','M', 'F']})
+df1 = pd.DataFrame({'rollno':[1,2,3,4], 'name': [ "Dhiraj", "Kounal", "Akhil", "Pooja" ]
+                    , 'marks':[ 40, 50, 60.5, 70 ], 'gender':['M', 'M','M', 'F']})
 df1
 type(df1) 
 
@@ -205,6 +208,7 @@ df1.groupby('gender').aggregate({'marks': [np.mean, 'max','min','std','count']})
 #https://matplotlib.org/
 
 import matplotlib.pyplot as plt
+
 df1.groupby('gender').size()
 df1.groupby('gender').size().plot(kind='bar')
 
